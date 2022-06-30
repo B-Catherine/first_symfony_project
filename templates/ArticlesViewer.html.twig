@@ -1,6 +1,16 @@
-{% for article in articles %}
-    {% if article['published'] == 'yes' %}
-        <h1 style="color:{{ article['color'] }};"> {{ article['title'] }} </h1>
-        <p> {{ article['content'] }}</p>
-    {% endif %}
-{%  endfor %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles du jour</title>
+</head>
+<body>
+    <h1>Les articles du jour</h1>
+    {% for article in articles %}
+        {% if article['published'] == 'yes' %}
+            <h2 style="color:{{ article['color'] }};"> {{ article['title'] }} </h2>
+            <p> {{ article['content'] }}</p>
+        {% endif %}
+    {%  endfor %}
+</body>
+</html>
