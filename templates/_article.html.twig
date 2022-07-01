@@ -1,7 +1,7 @@
 {% if star.published %}
     <article>
         <img src="{{ star.image }}" height="150px">
-        <h2 style="color:{{ star.color }};"> {{ star.title }} </h2>
+        <a href={{ path ('star', {'id': star.id}) }}><h2 style="color:{{ star.color }};"> {{ star.title }} </h2></a>
         <p> {{ star.description }}</p>
         <cite> publié le {{ star.publishedDate | date("d/m/Y") }}</cite>
     </article>
