@@ -5,16 +5,16 @@
     <title>Stars</title>
 </head>
 <body>
-<h1>La star du jour</h1>
+<h1>Les stars du jour</h1>
+{% for star in stars %}
     {% if star.published %}
-        <article>
+       <article>
             <img src="{{ star.image }}" height="150px">
             <h2 style="color:{{ star.color }};"> {{ star.title }} </h2>
             <p> {{ star.description }}</p>
             <cite> publié le {{ star.publishedDate | date("d/m/Y") }}</cite>
-        </article>
-    {% else %}
-        <p>Article non publié</p>
+       </article>
     {% endif %}
+{%  endfor %}
 </body>
 </html>
