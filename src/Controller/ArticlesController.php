@@ -7,35 +7,35 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ArticlesController extends AbstractController
 {
-    public $articles = [
+    public array $articles = [
         '1' => [
             'id' => 1,
-            'published' => 'yes',
+            'published' => true,
             'title' => 'Politique',
             'color' => 'yellow',
             'content' => 'Analyse de la crise par David'
         ],
         '2' => [
             'id' => 2,
-            'published' => 'yes',
+            'published' => true,
             'title' => 'Economie',
             'color' => 'red',
             'content' => 'Flambée des prix de l\'essence'
             ],
         '3' => [
             'id' => 3,
-            'published' => 'no',
+            'published' => false,
             'title' => 'Social',
             'color' => 'blue',
             'content' => 'Retour des Pokémon'
             ],
         '4' => [
             'id' => 4,
-            'published' => 'yes',
+            'published' => true,
             'title' => 'Fait Divers',
             'color' => 'green',
             'content' => 'Un lapin tue un chasseur'
-            ],
+            ]
 ];
 
     #[Route("/articles", name: "articles")]
