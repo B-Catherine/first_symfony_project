@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Articles du jour</title>
-</head>
-<body>
+{% include '_header.html.twig' %}
+
     <h1>Les articles du jour</h1>
     {% for article in articles %}
         {% if article.published %}
@@ -12,5 +7,5 @@
             <p> {{ article.content }}</p>
         {% endif %}
     {%  endfor %}
-</body>
-</html>
+
+{% include '_footer.html.twig' %}
