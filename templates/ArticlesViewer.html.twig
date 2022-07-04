@@ -1,11 +1,14 @@
 {% include '_header.html.twig' %}
 
     <h1>Les articles du jour</h1>
-    {% for article in articles %}
-        {% if article.published %}
-            <h2 style="color:{{ article.color }};"> {{ article.title }} </h2>
-            <p> {{ article.content }}</p>
-        {% endif %}
-    {%  endfor %}
-
+    <section id="articles">
+        {% for article in articles %}
+            {% if article.published %}
+                <article>
+                    <h2 style="color:{{ article.color }};"> {{ article.title }} </h2>
+                    <p> {{ article.content }}</p>
+                </article>
+            {% endif %}
+        {%  endfor %}
+    </section>
 {% include '_footer.html.twig' %}

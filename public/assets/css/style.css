@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: blue;
+    height: 50px;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+ul>li#center {
+    margin: 0 150px;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    margin: 1em 0 3em;
+}
+
+h2 {
+    margin-bottom: 2em;
+}
+
+section#articles {
+    display: flex;
+    justify-content: space-around;
+}
+
+img#logo_symfony {
+    height: 50vh;
+}
